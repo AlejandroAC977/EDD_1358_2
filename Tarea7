@@ -1,0 +1,55 @@
+
+package com.mycompany.eddnodo;
+
+/**
+ *
+ * @author Alejandro
+ */
+public class Colas<T> {
+    Nodo IniCola, FinCola;
+    
+    public Colas(){
+    }
+
+    public Colas(Nodo IniCola, Nodo FinCola) {
+        this.IniCola = IniCola;
+        this.FinCola = FinCola;
+    }
+    
+    public boolean estaVacia(){
+     if(IniCola==null){
+      return true;
+     }else{
+      return false;
+     }
+    }
+     
+    public void enqueue(T dato){ //final
+     
+     Nodo Nuevo_Nodo = new Nodo();
+     Nuevo_Nodo.setDato(dato);
+     if(estaVacia()){
+     IniCola=Nuevo_Nodo;
+     }{
+     Nuevo_Nodo=FinCola;
+     }
+
+    }
+
+    public Nodo dequeue(){ //saca el primero
+    Nodo aux = new Nodo();
+     aux.setDato(this.IniCola.getDato());
+     this.IniCola.setDato(this.IniCola.getSiguiente());
+ 
+     return aux;
+    }
+    
+    
+
+    //
+
+
+    public static void main(String[] args) {
+        
+    }
+}
