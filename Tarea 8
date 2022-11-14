@@ -1,0 +1,51 @@
+
+package com.mycompany.eddnodo;
+
+import java.util.ArrayList;
+
+
+/**
+ *
+ * @author Alejandro
+ */
+public class PrioridadAcotada<T> {
+    private ArregloADT niveles;
+    private Colas cola;
+    private int p;
+    private int NumNiveles;
+
+    public PrioridadAcotada(){
+    }
+
+    public PrioridadAcotada(int NumNiveles, ArregloADT<T> niveles){
+    this.NumNiveles = NumNiveles;
+    this.niveles = niveles;
+    }
+
+    public boolean estaVacia(){
+    
+     return; 
+    }
+
+    public void enqueue(int p, T dato){
+
+     niveles=new ArregloADT(NumNiveles);
+     niveles.setElemento(p, dato);    
+
+    }
+  
+    public T dequeue(){
+
+     T mayor=null;
+     
+     
+     return mayor;
+
+    }
+
+
+
+    public static void main(String[] args) {
+        
+    }
+}
